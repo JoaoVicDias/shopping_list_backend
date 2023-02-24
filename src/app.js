@@ -25,6 +25,6 @@ app.use(errorHandler);
 app.use(notFound);
 
 mongoose.connect(process.env.DATABASE_LINK).then(() => {
-  app.listen(5000);
+  app.listen(process.env.PORT || 5000);
 }).catch(() => {
 });
